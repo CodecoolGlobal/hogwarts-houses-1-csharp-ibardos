@@ -1,0 +1,52 @@
+@startuml
+
+class GreetingController {
++Greeting(string) : string
+}
+
+interface IRepository<T> {
+}
+
+interface IRoomService {
+}
+
+class RoomSampledRepository {
+-RoomSampler <<+set>> : RoomSampler
+}
+
+class RoomSampler {
++Rooms <<-set>> : HashSet<Room>
++Initialize() : void
+}
+
+class RoomService {
+-Repository <<+get>> : IRepository<Room>
+}
+
+enum HouseType {
+GRYFFINDOR,
+HUFFLEPUFF,
+RAVENCLAW,
+SLYTHERIN
+}
+
+enum PetType {
+NONE,
+CAT,
+RAT,
+OWL
+}
+
+class Room {
+}
+
+class Student {
+}
+
+RoomSampledRepository <|.. IRepository
+RoomSampledRepository o-- RoomSampler
+
+RoomService <|.. IRoomService
+RoomService o-- IRepository
+
+@enduml
