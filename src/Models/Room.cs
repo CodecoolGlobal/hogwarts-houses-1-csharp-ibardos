@@ -18,5 +18,12 @@ namespace HogwartsHouses.Models
             Residents = new HashSet<Student>();
         }
 
+        public void AddResident(Student student)
+        {
+            if (!IsOccupied)
+            {
+                Residents.Add(student);
+            }
+        }
     }
 }
