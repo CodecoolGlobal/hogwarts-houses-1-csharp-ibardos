@@ -1,4 +1,4 @@
-namespace HogwartsHouses.DAL
+namespace HogwartsHouses.Services.Interfaces
 {
     public interface IRoomService
     {

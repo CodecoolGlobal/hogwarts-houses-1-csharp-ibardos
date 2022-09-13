@@ -1,6 +1,8 @@
 using HogwartsHouses.Models;
+using HogwartsHouses.Repositories.Interfaces;
+using HogwartsHouses.Services;
 
-namespace HogwartsHouses.DAL
+namespace HogwartsHouses.Repositories
 {
     public class RoomSampledRepository : IRepository<Room>
     {

@@ -1,6 +1,8 @@
 using HogwartsHouses.Models;
+using HogwartsHouses.Repositories.Interfaces;
+using HogwartsHouses.Services.Interfaces;
 
-namespace HogwartsHouses.DAL
+namespace HogwartsHouses.Services
 {
     public class RoomService : IRoomService
     {

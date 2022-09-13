@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using HogwartsHouses.Models;
 
-namespace HogwartsHouses.DAL
+namespace HogwartsHouses.Services
 {
     public class RoomSampler
     {

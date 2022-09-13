@@ -1,4 +1,4 @@
-namespace HogwartsHouses.DAL
+namespace HogwartsHouses.Repositories.Interfaces
 {
     public interface IRepository<T>
     {
