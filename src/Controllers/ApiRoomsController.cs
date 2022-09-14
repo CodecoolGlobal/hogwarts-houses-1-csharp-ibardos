@@ -21,4 +21,13 @@ public class ApiRoomsController : ControllerBase
     {
         return _roomService.GetAllRooms();
     }
+
+    [HttpPost]
+    public IActionResult AddRoom()
+    {
+        Room roomToAdd = new();
+        _roomService.AddRoom(roomToAdd);
+
+        return CreatedAtAction(nameof(AddRoom), roomToAdd);
+    }
 }
