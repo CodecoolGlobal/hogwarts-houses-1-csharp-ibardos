@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using HogwartsHouses.Models;
 using HogwartsHouses.Repositories.Interfaces;
 using HogwartsHouses.Services;
@@ -11,6 +13,11 @@ namespace HogwartsHouses.Repositories
         public RoomSampledRepository()
         {
             _roomSampler = new RoomSampler();
+        }
+
+        public HashSet<Room> GetAll()
+        {
+            return _roomSampler.Rooms;
         }
     }
 }
