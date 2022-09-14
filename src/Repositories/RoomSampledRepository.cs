@@ -29,5 +29,10 @@ namespace HogwartsHouses.Repositories
         {
             return _roomSampler.GetRoomById(id);
         }
+
+        public int? Delete(int id)
+        {
+            return _roomSampler.DeleteRoomById(id);
+        }
     }
 }

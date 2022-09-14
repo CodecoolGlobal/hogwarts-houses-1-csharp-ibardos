@@ -41,5 +41,19 @@ namespace HogwartsHouses.Services
                 return null;
             }
         }
+
+        public int? DeleteRoomById(int id)
+        {
+            try
+            {
+                Rooms.Remove(GetRoomById(id));
+            }
+            catch (InvalidOperationException)
+            {
+                return null;
+            }
+
+            return id;
+        }
     }
 }

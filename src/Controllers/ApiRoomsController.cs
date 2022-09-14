@@ -42,4 +42,19 @@ public class ApiRoomsController : ControllerBase
 
         return room;
     }
+
+    [HttpDelete("{id}")]
+    public ActionResult DeleteRoomById(int id)
+    {
+        Room room = _roomService.GetRoomById(id);
+        
+        if (room is null)
+        {
+            return NotFound("Room with the defined ID does not exist.");
+        }
+
+        _roomService.DeleteRoomById(id);
+
+        return NoContent();
+    }
 }

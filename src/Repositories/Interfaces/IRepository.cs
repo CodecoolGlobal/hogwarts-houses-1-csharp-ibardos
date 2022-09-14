@@ -8,5 +8,6 @@ namespace HogwartsHouses.Repositories.Interfaces
         HashSet<T> GetAll();
         void Add(Room room);
         Room Get(int id);
+        int? Delete(int id);
     }
 }
