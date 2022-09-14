@@ -16,4 +16,9 @@ public class ApiRoomsController : ControllerBase
         _roomService = roomService;
     }
 
+    [HttpGet]
+    public HashSet<Room> GetAllRooms()
+    {
+        return _roomService.GetAllRooms();
+    }
 }
