@@ -1,13 +1,21 @@
+using HogwartsHouses.Services;
+using HogwartsHouses.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HogwartsHouses.Controllers;
 
-[ApiController, Route("[controller]")]
-public class RoomsController : ControllerBase
+public class RoomsController : Controller
 {
-    [HttpGet]
-    public string GetRooms()
+    private IRoomService _roomService;
+
+    public RoomsController(IRoomService roomService)
     {
-        return "This is rooms API route.";
+        _roomService = roomService;
+    }
+
+    // GET
+    public IActionResult Rooms()
+    {
+        return View(_roomService.GetAllRooms());
     }
 }
