@@ -8,4 +8,22 @@
 <h2>Rooms</h2>
 
 
+<div class="container">
+    @foreach (var room in Model)
+    {
+        <p>Room number: @room.Id</p>
+        <p>
+            Residents:
+            @if (room.Residents.Count == 0)
+            {
+                <span>No residents.</span>
+            }
+            else
+            {
+                @(String.Join(", ", room.Residents.Select(resident => resident.Name)))
+            }
+        </p>
+        <p>Occupied: @room.IsOccupied</p>
+        <br>
+    }
 </div>
