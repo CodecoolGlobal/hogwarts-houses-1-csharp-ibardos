@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using HogwartsHouses.Models;
+using HogwartsHouses.Models.Types;
 
 namespace HogwartsHouses.Services
 {
@@ -15,7 +16,12 @@ namespace HogwartsHouses.Services
 
         public void Initialize()
         {
-            throw new NotImplementedException();
+            Rooms = new HashSet<Room>();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                Rooms.Add(new Room());
+            }
         }
     }
 }
