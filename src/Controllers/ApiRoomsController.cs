@@ -16,13 +16,13 @@ public class ApiRoomsController : ControllerBase
     }
 
     [HttpGet]
-    public HashSet<Room> GetAllRooms()
+    public ActionResult<HashSet<Room>> GetAllRooms()
     {
         return _roomService.GetAllRooms();
     }
 
     [HttpPost]
-    public IActionResult AddRoom()
+    public ActionResult AddRoom()
     {
         Room roomToAdd = new();
         _roomService.AddRoom(roomToAdd);
