@@ -29,4 +29,17 @@ public class ApiRoomsController : ControllerBase
 
         return CreatedAtAction(nameof(AddRoom), roomToAdd);
     }
+
+    [HttpGet("{id}")]
+    public ActionResult<Room> GetRoomById(int id)
+    {
+        Room room = _roomService.GetRoomById(id);
+
+        if (room is null)
+        {
+            return NotFound("Room with the defined ID does not exist.");
+        }
+
+        return room;
+    }
 }

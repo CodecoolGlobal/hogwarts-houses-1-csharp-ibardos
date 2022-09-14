@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using HogwartsHouses.Models;
 using HogwartsHouses.Models.Types;
 
@@ -27,6 +28,18 @@ namespace HogwartsHouses.Services
         public void AddRoom(Room room)
         {
             Rooms.Add(room);
+        }
+
+        public Room GetRoomById(int id)
+        {
+            try
+            {
+                return Rooms.First(room => room.Id == id);
+            }
+            catch (InvalidOperationException)
+            {
+                return null;
+            }
         }
     }
 }

@@ -24,5 +24,10 @@ namespace HogwartsHouses.Repositories
         {
             _roomSampler.AddRoom(room);
         }
+
+        public Room Get(int id)
+        {
+            return _roomSampler.GetRoomById(id);
+        }
     }
 }
