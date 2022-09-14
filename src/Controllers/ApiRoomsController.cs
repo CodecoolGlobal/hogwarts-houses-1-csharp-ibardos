@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HogwartsHouses.Controllers;
 
-[ApiController, Route("[controller]")]
+[ApiController, Route("api/rooms")]
 public class ApiRoomsController : ControllerBase
 {
     private IRoomService _roomService;
