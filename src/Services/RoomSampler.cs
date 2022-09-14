@@ -23,5 +23,10 @@ namespace HogwartsHouses.Services
                 Rooms.Add(new Room());
             }
         }
+
+        public void AddRoom(Room room)
+        {
+            Rooms.Add(room);
+        }
     }
 }

@@ -6,5 +6,6 @@ namespace HogwartsHouses.Services.Interfaces
     public interface IRoomService
     {
         HashSet<Room> GetAllRooms();
+        void AddRoom(Room room);
     }
 }

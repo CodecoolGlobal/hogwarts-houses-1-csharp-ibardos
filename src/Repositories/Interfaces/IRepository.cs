@@ -6,5 +6,6 @@ namespace HogwartsHouses.Repositories.Interfaces
     public interface IRepository<T>
     {
         HashSet<T> GetAll();
+        void Add(Room room);
     }
 }

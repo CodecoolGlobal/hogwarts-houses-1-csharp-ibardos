@@ -19,5 +19,10 @@ namespace HogwartsHouses.Services
         {
             return _repository.GetAll();
         }
+
+        public void AddRoom(Room room)
+        {
+            _repository.Add(room);
+        }
     }
 }
