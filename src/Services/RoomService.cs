@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using HogwartsHouses.Models;
+using HogwartsHouses.Repositories;
 using HogwartsHouses.Repositories.Interfaces;
 using HogwartsHouses.Services.Interfaces;
 
@@ -11,6 +13,11 @@ namespace HogwartsHouses.Services
         public RoomService(IRepository<Room> repository)
         {
             _repository = repository;
+        }
+
+        public HashSet<Room> GetAllRooms()
+        {
+            return _repository.GetAll();
         }
     }
 }
