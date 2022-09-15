@@ -8,10 +8,15 @@ namespace HogwartsHouses.Data
     public class RoomInMemoryDb
     {
         public HashSet<Room> Rooms { get; private set; }
+        private StudentInMemoryDb _studentInMemoryDb;
 
         public RoomInMemoryDb()
         {
+            _studentInMemoryDb = new();
             Initialize();
+            
+            AddResident(0, _studentInMemoryDb.GetStudentById(0));
+            AddResident(1, _studentInMemoryDb.GetStudentById(1));
         }
 
         public void Initialize()
@@ -21,6 +26,16 @@ namespace HogwartsHouses.Data
             for (int i = 0; i < 10; i++)
             {
                 AddRoom(new Room());
+            }
+        }
+
+        private void AddResident(int roomId, Student student)
+        {
+            Room roomToAdd = GetRoomById(roomId);
+
+            if (roomToAdd.IsOccupied is false)
+            {
+                roomToAdd.Residents.Add(student);
             }
         }
 
