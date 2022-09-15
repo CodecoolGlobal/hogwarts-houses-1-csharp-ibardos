@@ -8,5 +8,7 @@ namespace HogwartsHouses.Data
 {
     public class StudentInMemoryDb
     {
+        public HashSet<Student> Students { get; private set; }
+
     }
 }
