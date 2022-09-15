@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using HogwartsHouses.Data;
 using HogwartsHouses.Models;
 using HogwartsHouses.Repositories.Interfaces;
-using HogwartsHouses.Services;
 
 namespace HogwartsHouses.Repositories
 {

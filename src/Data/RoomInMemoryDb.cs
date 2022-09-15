@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HogwartsHouses.Models;
 
-namespace HogwartsHouses.Services
+namespace HogwartsHouses.Data
 {
     public class RoomInMemoryDb
     {
