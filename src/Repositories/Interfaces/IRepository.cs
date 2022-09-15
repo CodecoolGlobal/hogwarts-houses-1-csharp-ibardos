@@ -6,9 +6,9 @@ namespace HogwartsHouses.Repositories.Interfaces
     public interface IRepository<T>
     {
         HashSet<T> GetAll();
-        void Add(Room room);
-        Room Get(int id);
+        void Add(T item);
+        T Get(int id);
         void Delete(int id);
-        void Update(int id, Room room);
+        void Update(int id, T item);
     }
 }
