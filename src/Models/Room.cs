@@ -9,6 +9,7 @@ namespace HogwartsHouses.Models
         public int Id { get; set; }
         public HashSet<Student> Residents { get; }
         public bool IsOccupied => Residents.Count == 2;
+        public int NumberOfBeds { get; set; }
 
 
         public Room()
