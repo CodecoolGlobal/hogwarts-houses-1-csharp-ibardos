@@ -9,5 +9,6 @@ namespace HogwartsHouses.Services.Interfaces
         void AddRoom(Room room);
         Room GetRoomById(int id);
         int? DeleteRoomById(int id);
+        void UpdateRoom(int id, Room room);
     }
 }

@@ -55,5 +55,12 @@ namespace HogwartsHouses.Services
 
             return id;
         }
+
+        public void UpdateRoomById(int id, Room room)
+        {
+            DeleteRoomById(id);
+
+            AddRoom(room);
+        }
     }
 }

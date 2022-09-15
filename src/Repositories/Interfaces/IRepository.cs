@@ -9,5 +9,6 @@ namespace HogwartsHouses.Repositories.Interfaces
         void Add(Room room);
         Room Get(int id);
         int? Delete(int id);
+        void Update(int id, Room room);
     }
 }

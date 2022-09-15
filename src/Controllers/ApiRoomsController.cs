@@ -57,4 +57,23 @@ public class ApiRoomsController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpPut("{id}")]
+    public ActionResult UpdateRoomById(int id, [FromBody] Room room)
+    {
+        if (id != room.Id)
+        {
+            return BadRequest();
+        }
+
+        Room roomToUpdate = _roomService.GetRoomById(id);
+        if (roomToUpdate is null)
+        {
+            return NotFound("Room with the defined ID does not exist.");
+        }
+
+        _roomService.UpdateRoom(id, room);
+
+        return NoContent();
+    }
 }
