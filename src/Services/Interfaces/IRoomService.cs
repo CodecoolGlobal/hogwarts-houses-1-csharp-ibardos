@@ -8,7 +8,7 @@ namespace HogwartsHouses.Services.Interfaces
         HashSet<Room> GetAllRooms();
         void AddRoom(Room room);
         Room GetRoomById(int id);
-        int? DeleteRoomById(int id);
+        void DeleteRoomById(int id);
         void UpdateRoom(int id, Room room);
     }
 }

@@ -18,7 +18,7 @@ namespace HogwartsHouses.Services
         public void Initialize()
         {
             Rooms = new HashSet<Room>();
-            
+
             for (int i = 0; i < 10; i++)
             {
                 AddRoom(new Room());
@@ -42,18 +42,9 @@ namespace HogwartsHouses.Services
             }
         }
 
-        public int? DeleteRoomById(int id)
+        public void DeleteRoomById(int id)
         {
-            try
-            {
-                Rooms.Remove(GetRoomById(id));
-            }
-            catch (InvalidOperationException)
-            {
-                return null;
-            }
-
-            return id;
+            Rooms.Remove(GetRoomById(id));
         }
 
         public void UpdateRoomById(int id, Room room)
