@@ -17,6 +17,14 @@ namespace HogwartsHouses.Models
             Id = _lastId;
             _lastId++;
             Residents = new HashSet<Student>();
+            NumberOfBeds = 2;
+        }
+
+        public Room(int id, HashSet<Student> residents, int numberOfBeds)
+        {
+            NumberOfBeds = numberOfBeds;
+            Id = id;
+            Residents = residents;
         }
 
         public void AddResident(Student student)
