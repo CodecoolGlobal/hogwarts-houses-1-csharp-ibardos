@@ -10,5 +10,9 @@ namespace HogwartsHouses.Data
     {
         public HashSet<Student> Students { get; private set; }
 
+        public StudentInMemoryDb()
+        {
+            Initialize();
+        }
     }
 }
