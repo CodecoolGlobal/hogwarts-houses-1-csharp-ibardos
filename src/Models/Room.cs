@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HogwartsHouses.Models.Types;
 
 namespace HogwartsHouses.Models
 {
@@ -10,6 +11,7 @@ namespace HogwartsHouses.Models
         public HashSet<Student> Residents { get; }
         public bool IsOccupied => Residents.Count == 2;
         public int NumberOfBeds { get; set; }
+        public HashSet<PetType> PetsInRoom { get; set; }
 
 
         public Room()
@@ -18,6 +20,7 @@ namespace HogwartsHouses.Models
             _lastId++;
             Residents = new HashSet<Student>();
             NumberOfBeds = 2;
+            PetsInRoom = new HashSet<PetType>();
         }
 
         public Room(int id, HashSet<Student> residents, int numberOfBeds)
