@@ -5,38 +5,38 @@ using HogwartsHouses.Services;
 
 namespace HogwartsHouses.Repositories
 {
-    public class RoomSampledRepository : IRepository<Room>
+    public class RoomRepository : IRepository<Room>
     {
-        private RoomSampler _roomSampler { get; }
+        private RoomInMemoryDb RoomInMemoryDb { get; }
 
-        public RoomSampledRepository()
+        public RoomRepository()
         {
-            _roomSampler = new RoomSampler();
+            RoomInMemoryDb = new RoomInMemoryDb();
         }
 
         public HashSet<Room> GetAll()
         {
-            return _roomSampler.Rooms;
+            return RoomInMemoryDb.Rooms;
         }
 
         public void Add(Room room)
         {
-            _roomSampler.AddRoom(room);
+            RoomInMemoryDb.AddRoom(room);
         }
 
         public Room Get(int id)
         {
-            return _roomSampler.GetRoomById(id);
+            return RoomInMemoryDb.GetRoomById(id);
         }
 
         public void Delete(int id)
         {
-            _roomSampler.DeleteRoomById(id);
+            RoomInMemoryDb.DeleteRoomById(id);
         }
 
         public void Update(int id, Room room)
         {
-            _roomSampler.UpdateRoomById(id, room);
+            RoomInMemoryDb.UpdateRoomById(id, room);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace HogwartsHouses
         {
             services.AddControllers();
             services.AddControllersWithViews();
-            services.AddSingleton<IRepository<Room>>(x => new RoomSampledRepository());
+            services.AddSingleton<IRepository<Room>>(x => new RoomRepository());
             services.AddSingleton<IRoomService>(x => new RoomService(x.GetRequiredService<IRepository<Room>>()));
         }
 
