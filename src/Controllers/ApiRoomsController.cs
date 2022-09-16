@@ -87,4 +87,17 @@ public class ApiRoomsController : ControllerBase
 
         return rooms.Where(room => room.IsOccupied == false).Select(room => room).ToHashSet();
     }
+
+    [HttpGet]
+    [Route("rat-owners")]
+    public ActionResult<HashSet<Room>> GetAvailableRoomsForRatOwners()
+    {
+        HashSet<Room> rooms = _roomService.GetAllRooms();
+
+        return rooms
+            .Where(room => room.IsOccupied == false)
+            .Where(room => !room.PetsInRoom.Contains(PetType.Cat))
+            .Where(room => !room.PetsInRoom.Contains(PetType.Owl))
+            .Select(room => room).ToHashSet();
+    }
 }
