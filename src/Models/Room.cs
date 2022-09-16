@@ -6,7 +6,7 @@ namespace HogwartsHouses.Models
     [System.Serializable]
     public class Room
     {
-        private static int _lastId;
+        private static int _lastId = 1;
         public int Id { get; set; }
         public HashSet<Student> Residents { get; }
         public bool IsOccupied => Residents.Count == 2;

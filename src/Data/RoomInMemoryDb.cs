@@ -16,16 +16,16 @@ namespace HogwartsHouses.Data
             _studentInMemoryDb = new();
             Initialize();
             
-            AddResident(0, _studentInMemoryDb.GetStudentById(0));
-            AddResident(1, _studentInMemoryDb.GetStudentById(1));
-            AddResident(1, _studentInMemoryDb.GetStudentById(2));
+            AddResident(1, _studentInMemoryDb.GetStudentById(0));
+            AddResident(2, _studentInMemoryDb.GetStudentById(1));
+            AddResident(2, _studentInMemoryDb.GetStudentById(2));
         }
 
         public void Initialize()
         {
             Rooms = new HashSet<Room>();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
                 AddRoom(new Room());
             }
