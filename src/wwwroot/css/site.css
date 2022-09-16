@@ -42,7 +42,7 @@ body {
 }
 
 .buttonBlue:hover {
-  background-color: white;
+  background-color: #7abaff;
   color: black;
   border: 2px solid #008CBA;
 }
