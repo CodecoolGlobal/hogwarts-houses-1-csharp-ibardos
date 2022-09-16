@@ -46,58 +46,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{api_path}}/rooms/1",
+					"raw": "{{api_path}}/rooms/2",
 					"host": [
 						"{{api_path}}"
 					],
 					"path": [
 						"rooms",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DeleteRoomById",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{api_path}}/rooms/0",
-					"host": [
-						"{{api_path}}"
-					],
-					"path": [
-						"rooms",
-						"0"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UpdateRoomById",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"id\":0,\"residents\":[],\"isOccupied\":false,\"numberOfBeds\":33,\"petsInRoom\":[]}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{api_path}}/rooms/0",
-					"host": [
-						"{{api_path}}"
-					],
-					"path": [
-						"rooms",
-						"0"
+						"2"
 					]
 				}
 			},
@@ -134,6 +89,51 @@
 					"path": [
 						"rooms",
 						"rat-owners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRoomById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms/1",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRoomById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":2,\"residents\":[],\"isOccupied\":false,\"numberOfBeds\":33,\"petsInRoom\":[]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_path}}/rooms/2",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"2"
 					]
 				}
 			},
