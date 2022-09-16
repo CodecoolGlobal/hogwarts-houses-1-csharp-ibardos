@@ -52,6 +52,17 @@ body {
   color: white;
 }
 
+.buttonRed:hover {
+  background-color: #ed969e;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.buttonRed {
+  background-color: #dc3545;
+  color: white;
+}
+
 .footer a {
   color: #9fcdff;
 }
