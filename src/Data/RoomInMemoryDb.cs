@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HogwartsHouses.Models;
+using HogwartsHouses.Models.Types;
 
 namespace HogwartsHouses.Data
 {
@@ -17,6 +18,7 @@ namespace HogwartsHouses.Data
             
             AddResident(0, _studentInMemoryDb.GetStudentById(0));
             AddResident(1, _studentInMemoryDb.GetStudentById(1));
+            AddResident(1, _studentInMemoryDb.GetStudentById(2));
         }
 
         public void Initialize()
