@@ -3,31 +3,39 @@
     Layout = "_Layout";
 }
 
-<h4>Welcome to my Codecool project, named Hogwarts Houses!</h4>
+<h3>Welcome to my Codecool project, named Hogwarts Houses!</h3>
 <br/>
 
 <div class="card center">
     <p>
-        This is a kind of <em>reimagination</em> of the original Codecool project, where I put some own effort to further
-        develop the structure and functionalities of the application. The project is mainly focusing on the development
-        of <strong>RESTful web APIs</strong>, therefore it should be tested via HTTP requests. I recommend to
-        <strong>use Postman</strong>, as it is a relatively easy-to-use tool to test web APIs.
+        This is a kind of <em>reimagination</em> of the original Codecool project, based on the story of Harry Potter,
+        where I put some own effort to further develop the structure and functionalities of the application.
+        The project is mainly focusing on the development of <strong>RESTful web APIs</strong>, from where you can
+        retrieve data about the rooms of Hogwarts, therefore it should be tested via HTTP requests. I recommend to
+        <strong>use Postman</strong> for the task, as it is a relatively easy-to-use tool to test web APIs.
     </p>
 
-    <p>For testing web APIs, please use the links below to download Postman, and the predefined Collection of HTTP requests for it.</p>
-
-    <p>To see more of my projects, you can check my GitHub account with the link at the footer.</p>
+    <p><em>To see more of my projects, you can check my GitHub account with the link at the footer.</em></p>
 
     <p>
-        You can download Postman from <a href="https://www.postman.com/downloads/" target="_blank">here</a>.
-        <br>
-        To get the exported Collection of Postman HTTP requests, click <a asp-controller="Home" asp-action="PostmanJsonInfo" target="_blank">here</a>.
+        To continue, you have two choices below. Make your own, but choose wisely, as there will be no return buttons
+        later on, so you won't be able to be redirected here...
     </p>
 </div>
 
-<a class="button buttonBlue" asp-controller="Rooms" asp-action="Rooms" target="_blank">
-    To see a Razor page about available rooms at Hogwarts, click on this button!
-</a>
+<div class="row">
+    <div class="column">
+        <a class="button buttonRed" asp-controller="Home" asp-action="PostmanJsonInfo">
+            <strong>Red pill:</strong> Let me dive into the Matrix, and test some RESTful Api!
+        </a>
+    </div>
+
+    <div class="column">
+        <a class="button buttonBlue" asp-controller="Rooms" asp-action="Rooms">
+            <strong>Blue pill:</strong> Just see a Razor page about current rooms at Hogwarts.
+        </a>
+    </div>
+</div>
 
 <footer class="footer">
     <span>Created by ibardos => <a href="https://github.com/ibardos">GitHub profile.</a></span>
