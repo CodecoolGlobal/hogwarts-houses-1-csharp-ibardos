@@ -38,6 +38,7 @@ namespace HogwartsHouses.Data
             if (roomToAdd.IsOccupied is false)
             {
                 roomToAdd.Residents.Add(student);
+                roomToAdd.PetsInRoom.Add(student.Pet.GetValueOrDefault());
             }
         }
 
