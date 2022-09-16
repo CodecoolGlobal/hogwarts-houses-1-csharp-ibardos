@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using HogwartsHouses.Models;
+using HogwartsHouses.Models.Types;
 using HogwartsHouses.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -75,5 +77,14 @@ public class ApiRoomsController : ControllerBase
         _roomService.UpdateRoom(id, room);
 
         return NoContent();
+    }
+
+    [HttpGet]
+    [Route("available")]
+    public ActionResult<HashSet<Room>> GetAvailableRooms()
+    {
+        HashSet<Room> rooms = _roomService.GetAllRooms();
+
+        return rooms.Where(room => room.IsOccupied == false).Select(room => room).ToHashSet();
     }
 }
