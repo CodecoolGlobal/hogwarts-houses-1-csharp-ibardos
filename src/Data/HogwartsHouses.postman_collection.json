@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "d9d8a290-5883-4756-a910-b89736b1c38b",
+		"name": "Hogwarts Houses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22591207"
+	},
+	"item": [
+		{
+			"name": "GetAllRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRoom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoomById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms/1",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRoomById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms/0",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRoomById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":0,\"residents\":[],\"isOccupied\":false,\"numberOfBeds\":33,\"petsInRoom\":[]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_path}}/rooms/0",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAvailableRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms/available",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAvailableRoomsForRatOwners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_path}}/rooms/rat-owners",
+					"host": [
+						"{{api_path}}"
+					],
+					"path": [
+						"rooms",
+						"rat-owners"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_path",
+			"value": "https://localhost:5001/api",
+			"type": "string"
+		}
+	]
+}
