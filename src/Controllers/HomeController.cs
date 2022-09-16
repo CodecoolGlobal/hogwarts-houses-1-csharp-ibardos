@@ -8,4 +8,10 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult PostmanJsonInfo()
+    {
+        return View();
+    }
+
 }
