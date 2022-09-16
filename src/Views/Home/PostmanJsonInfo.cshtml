@@ -3,14 +3,16 @@
     Layout = "_Layout";
 }
 <div class="card center">
-    <p>
+    <p style="text-align: left; margin-left: 20px">
         <strong>Use it this way:</strong>
     </p>
-    <p>
-        Click the button below, then copy the JSON code from the browser, and import the Collection of HTTP requests into
-        Postman as <em>raw text</em>. With the help of the predefined collection, you can easily test the application's web
-        APIs.
-    </p>
+    <ol style="text-align: left">
+        <li>Download Postman from <a href="https://www.postman.com/downloads/" target="_blank">here</a>.</li>
+        <li>Click the button below to get (on a separate browser tab) an exported Collection of HTTP requests in JSON format.</li>
+        <li>Copy the JSON text, and import it into Postman, as <strong>raw text</strong>.</li>
+        <li>Use the HTTP requests in the Postman Collection to test the APIs of the application.</li>
+        <li>Use the "GetAllRooms" HTTP GET request frequently to check the inMemory modifications, resulted by POST and/or PUT requests.</li>
+    </ol>
 </div>
 
 <a class="button buttonBlue" asp-controller="Home" asp-action="PostmanJson" target="_blank">See JSON.</a>
