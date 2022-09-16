@@ -11,19 +11,33 @@
 <div class="container">
     @foreach (var room in Model)
     {
-        <p>Room number: @room.Id</p>
-        <p>
-            Residents:
-            @if (room.Residents.Count == 0)
-            {
-                <span>No residents.</span>
-            }
-            else
-            {
-                @(String.Join(", ", room.Residents.Select(resident => resident.Name)))
-            }
-        </p>
-        <p>Occupied: @room.IsOccupied</p>
-        <br>
+        <div class="room-card center">
+            <p>Room number: @room.Id</p>
+            <p>
+                Residents:
+                @if (room.Residents.Count == 0)
+                {
+                    <span>No residents.</span>
+                }
+                else
+                {
+                    @(String.Join(", ", room.Residents.Select(resident => resident.Name)))
+                }
+            </p>
+            <p>Occupied: @room.IsOccupied</p>
+            <p>Number of beds: @room.NumberOfBeds</p>
+            <p>
+                Pets in room:
+                @if (room.PetsInRoom.Count == 0)
+                {
+                    <span>No pets.</span>
+                }
+                else
+                {
+                    @String.Join(", ", room.PetsInRoom.Select(type => type))
+                }
+            </p>
+            <br>
+        </div>
     }
 </div>
