@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using HogwartsHouses.Models;
 
 namespace HogwartsHouses.Repositories.Interfaces
 {

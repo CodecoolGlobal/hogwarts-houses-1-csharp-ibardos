@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using HogwartsHouses.Models;
-using HogwartsHouses.Repositories;
 using HogwartsHouses.Repositories.Interfaces;
 using HogwartsHouses.Services.Interfaces;
 
