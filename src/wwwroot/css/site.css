@@ -77,6 +77,14 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
 /* Provide sufficient contrast against white background */
 
 
