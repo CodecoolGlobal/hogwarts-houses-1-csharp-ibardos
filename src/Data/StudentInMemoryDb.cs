@@ -21,6 +21,7 @@ namespace HogwartsHouses.Data
 
             AddStudent(new Student("Hermione Granger", PetType.Cat));
             AddStudent(new Student("Draco Malfoy", PetType.None));
+            AddStudent(new Student("Dr. Stephen Strange", PetType.Owl));
         }
 
         public void AddStudent(Student student)
