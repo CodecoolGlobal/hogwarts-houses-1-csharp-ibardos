@@ -27,4 +27,4 @@
 
 ## Hints:
 - If you think you found an "easter egg" during the instructions, you are probably right.
-- If you don't understand anything, Google it, or feel free to contact me.
+- If you don't understand something, Google it, or feel free to contact me.
