@@ -21,7 +21,6 @@
 3. Start the server
 4. Follow the instructions at your browser (it will open automatically)
 5. Use the buttons to navigate
-6. Be happy
 
 <br>
 
